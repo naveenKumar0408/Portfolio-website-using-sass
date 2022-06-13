@@ -193,3 +193,24 @@ input[class^='btn-']:hover {
       line-height: 90px; }
       #home-c .process-icon:hover .process-step {
         background: #333; }
+
+#main-footer {
+  background: #333;
+  height: 5rem;
+  color: #fff; }
+  #main-footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    align-items: center; }
+    #main-footer .footer-content .social .fab {
+      margin-right: 1rem;
+      border: 2px #fff solid;
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+      line-height: 20px;
+      text-align: center;
+      padding: 0.5rem; }
+      #main-footer .footer-content .social .fab:hover {
+        background: #ffbc00; }

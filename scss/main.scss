@@ -110,6 +110,24 @@ img{
     }
 }
 
+// Section Title
+.section-title{
+    font-size: 2rem;
+    display: block;
+    padding-bottom: 0.5rem;
+    text-align: center;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+.bottom-line{
+    height: 2px;
+    width: 3rem;
+    background: $main-color;
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+
 //main Nav
 #main-nav{
     display: flex;
@@ -215,6 +233,56 @@ img{
                 }
                 &:nth-child(even){
                     background: $medium-color;
+                }
+            }
+        }
+    }
+
+    // Home Section C - Process Section
+    &-c{
+        .process{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-gap:1.5rem;
+            text-align: center;
+
+            //Process Step
+            &-step{
+                position:absolute;
+                top: 0;
+                right: 0;
+                font-size: 28px;
+                background: $main-color;
+                border-radius: 50%;
+                height: 15px;
+                width: 15px;
+                line-height: 15px;
+                padding: 1rem;
+                transition: all 1s;
+            }
+
+            //Process-Icon
+            &-icon{
+                border-radius: 50%;
+                background: $dark-color;
+                color: #fff;
+                padding: 2rem;
+                width: 70px;
+                height: 70px;
+                line-height: 70px;
+                text-align: center;
+                position: relative;
+                transition: all 1s;
+
+                &:hover{
+                    background: $main-color;
+                    width: 90px;
+                    height: 90px;
+                    line-height: 90px;
+
+                    .process-step{
+                        background:$dark-color;
+                    }
                 }
             }
         }

@@ -1,321 +1,321 @@
-@import 'config';
+@import "config";
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    font-family: 'Dosis',sans-serif;
-    line-height: 1.6;
-    background: #fff;
+body {
+  font-family: "Dosis", sans-serif;
+  line-height: 1.6;
+  background: #fff;
 }
 
-a{
-    text-decoration: none;
-    color: $dark-color;
+a {
+  text-decoration: none;
+  color: $dark-color;
 }
 
-ul{
-    list-style: none;
+ul {
+  list-style: none;
 }
 
-h2,h3,h4{
-    text-transform: uppercase;
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
 }
-img{
-    width: 100%;
+img {
+  width: 100%;
 }
 
 //Utilities
 .container {
-    max-width: $website-width;
-    padding: 0 1.5rem;
-    margin: auto;
-    overflow: hidden;
-  }
-  
-  // Buttons
-  %btn-shared {
-    display: inline-block;
-    padding: 0.8rem 2rem;
-    transition: all 0.5s;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .btn {
-    &-main {
-      @extend %btn-shared;
-      color: #333;
-      background-color: $main-color;
-    }
-  
-    &-light {
-      @extend %btn-shared;
-      color: #333;
-      background-color: $light-color;
-    }
-  
-    &-dark {
-      @extend %btn-shared;
-      color: #f4f4f4;
-      background-color: $dark-color;
-    }
-  }
-  
-  button[class^='btn-']:hover,
-  a[class^='btn-']:hover,
-  input[class^='btn-']:hover{
-      background-color: $main-color;
+  max-width: $website-width;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+// Buttons
+%btn-shared {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  transition: all 0.5s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn {
+  &-main {
+    @extend %btn-shared;
+    color: #333;
+    background-color: $main-color;
   }
 
-  .lead{
-      font-size: 1.3rem;
-      margin-bottom: 2rem;
-  }
-  .text-center{
-      text-align: center;
+  &-light {
+    @extend %btn-shared;
+    color: #333;
+    background-color: $light-color;
   }
 
-//   Padding - Y 
-  .py{
-      &-1{
-          padding: 1rem 0;
-      }
-      &-2{
-          padding: 2rem 0;
-      }
-      &-3{
-          padding: 3rem 0;
-      }
-      &-4{
-          padding: 4rem 0;
-      }
+  &-dark {
+    @extend %btn-shared;
+    color: #f4f4f4;
+    background-color: $dark-color;
   }
+}
+
+button[class^="btn-"]:hover,
+a[class^="btn-"]:hover,
+input[class^="btn-"]:hover {
+  background-color: $main-color;
+}
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+.text-center {
+  text-align: center;
+}
+
+//   Padding - Y
+.py {
+  &-1 {
+    padding: 1rem 0;
+  }
+  &-2 {
+    padding: 2rem 0;
+  }
+  &-3 {
+    padding: 3rem 0;
+  }
+  &-4 {
+    padding: 4rem 0;
+  }
+}
 
 //   Margin-Y
-.my{
-    &-1{
-        margin: 1rem 0;
-    }
-    &-2{
-        margin: 2rem 0;
-    }
-    &-3{
-        margin: 3rem 0;
-    }
-    &-4{
-        margin: 4rem 0;
-    }
+.my {
+  &-1 {
+    margin: 1rem 0;
+  }
+  &-2 {
+    margin: 2rem 0;
+  }
+  &-3 {
+    margin: 3rem 0;
+  }
+  &-4 {
+    margin: 4rem 0;
+  }
 }
 
 // Section Title
-.section-title{
-    font-size: 2rem;
-    display: block;
-    padding-bottom: 0.5rem;
-    text-align: center;
-    font-weight: 100;
-    text-transform: uppercase;
+.section-title {
+  font-size: 2rem;
+  display: block;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 100;
+  text-transform: uppercase;
 }
 
-.bottom-line{
-    height: 2px;
-    width: 3rem;
-    background: $main-color;
-    display: block;
-    margin: 0 auto 1rem auto;
+.bottom-line {
+  height: 2px;
+  width: 3rem;
+  background: $main-color;
+  display: block;
+  margin: 0 auto 1rem auto;
 }
 
 //main Nav
-#main-nav{
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+
+  ul {
     display: flex;
-    justify-content: space-between;
-    padding-top: 1rem;
+  }
+  li {
+    padding: 1rem 1.5rem;
+  }
+  a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 3px transparent solid;
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s;
 
-    ul{
-        display: flex;
+    &:hover {
+      border-color: $medium-color;
     }
-    li{
-        padding: 1rem 1.5rem;
+    &.current {
+      border-color: $main-color;
     }
-    a{
-        text-decoration: none;
-        color: #fff;
-        text-transform: uppercase;
-        border-bottom: 3px transparent solid;
-        transition: border-color 0.5s;
-        
-        &:hover{
-            border-color: $medium-color;
-        }
-        &.current{
-            border-color: $main-color;
-        }
-    }
-
+  }
 }
 
 //logo
-#logo{
-    width: 70px;
-    height: 70px;
-    color: #fff;
-    text-transform: uppercase;
+#logo {
+  width: 70px;
+  height: 70px;
+  color: #fff;
+  text-transform: uppercase;
 }
-//Header 
-#header{
-    //Header Home
-    &-home{
-        background: $bg-image no-repeat center right/cover;
-        height: 100vh;
-        color: #fff;
+//Header
+#header {
+  //Header Home
+  &-home {
+    background: $bg-image no-repeat center right/cover;
+    height: 100vh;
+    color: #fff;
 
-        //header Content
-        .header-content{
-            text-align: center;
-            padding-top: 20%;
+    //header Content
+    .header-content {
+      text-align: center;
+      padding-top: 20%;
 
-            h1{
-                font-size: 4rem;
-                line-height: 1.2;
-            }
-        }
+      h1 {
+        font-size: 4rem;
+        line-height: 1.2;
+      }
     }
+  }
 
-
-    //Header Inner
-    &-inner{
-
-    }
+  //Header Inner
+  &-inner {
+  }
 }
 
 // Home Sections
-#home{
-    // Home Specialize Sections - Section A
-    &-a{
-        .specials{
-            margin-top: 3rem;
-            display: grid;
-            grid-gap: 1rem;
-            grid-template-columns: repeat(4,1fr);
+#home {
+  // Home Specialize Sections - Section A
+  &-a {
+    .specials {
+      margin-top: 3rem;
+      display: grid;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(4, 1fr);
 
-            .fas{
-                padding-bottom: 0.4rem;
-                color: $main-color;
-            }
-        }
+      .fas {
+        padding-bottom: 0.4rem;
+        color: $main-color;
+      }
     }
+  }
 
-    // Home Stats Section - section B
-    &-b{
-        .stats{
-            display: grid;
-            grid-template-columns: repeat(4,1fr);
+  // Home Stats Section - section B
+  &-b {
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
 
-            li{
-                line-height: 2;
+      li {
+        line-height: 2;
 
-                &.stats-title{
-                    font-size: 1.5rem;
-                }
-                &.stats-number {
-                    font-size: 2rem;
-                    font-weight: bold;
-                }
-            }
-            div{
-                padding: 3rem 0;
-
-                &:nth-child(odd){
-                    background: $light-color;
-                }
-                &:nth-child(even){
-                    background: $medium-color;
-                }
-            }
+        &.stats-title {
+          font-size: 1.5rem;
         }
-    }
-
-    // Home Section C - Process Section
-    &-c{
-        .process{
-            display: grid;
-            grid-template-columns: repeat(4,1fr);
-            grid-gap:1.5rem;
-            text-align: center;
-
-            //Process Step
-            &-step{
-                position:absolute;
-                top: 0;
-                right: 0;
-                font-size: 28px;
-                background: $main-color;
-                color: set-text-color($main-color);
-                border-radius: 50%;
-                height: 15px;
-                width: 15px;
-                line-height: 15px;
-                padding: 1rem;
-                transition: all 1s;
-            }
-
-            //Process-Icon
-            &-icon{
-                border-radius: 50%;
-                background: $dark-color;
-                color: set-text-color($dark-color);
-                padding: 2rem;
-                width: 70px;
-                height: 70px;
-                line-height: 70px;
-                text-align: center;
-                position: relative;
-                transition: all 1s;
-
-                &:hover{
-                    background: $main-color;
-                    width: 90px;
-                    height: 90px;
-                    line-height: 90px;
-
-                    .process-step{
-                        background:$dark-color;
-                        color:set-text-color($dark-color);
-                    }
-                }
-            }
+        &.stats-number {
+          font-size: 2rem;
+          font-weight: bold;
         }
+      }
+      div {
+        padding: 3rem 0;
+
+        &:nth-child(odd) {
+          background: $light-color;
+        }
+        &:nth-child(even) {
+          background: $medium-color;
+        }
+      }
     }
+  }
+
+  // Home Section C - Process Section
+  &-c {
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1.5rem;
+      text-align: center;
+
+      //Process Step
+      &-step {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 28px;
+        background: $main-color;
+        color: set-text-color($main-color);
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+        line-height: 15px;
+        padding: 1rem;
+        transition: all 1s;
+      }
+
+      //Process-Icon
+      &-icon {
+        border-radius: 50%;
+        background: $dark-color;
+        color: set-text-color($dark-color);
+        padding: 2rem;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        position: relative;
+        transition: all 1s;
+
+        &:hover {
+          background: $main-color;
+          width: 90px;
+          height: 90px;
+          line-height: 90px;
+
+          .process-step {
+            background: $dark-color;
+            color: set-text-color($dark-color);
+          }
+        }
+      }
+    }
+  }
 }
 
-//Footer 
-#main-footer{
-    background: $dark-color;
+//Footer
+#main-footer {
+  background: $dark-color;
+  height: 5rem;
+  color: #fff;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
     height: 5rem;
-    color: #fff;
+    align-items: center;
 
-    .footer-content{
-        display: flex;
-        justify-content: space-between;
-        height: 5rem;
-        align-items: center;
+    .social .fab {
+      margin-right: 1rem;
+      border: 2px #fff solid;
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+      line-height: 20px;
+      text-align: center;
+      padding: 0.5rem;
 
-        .social .fab{
-            margin-right: 1rem;
-            border: 2px #fff solid;
-            border-radius: 50%;
-            height: 20px;
-            width: 20px;
-            line-height: 20px;
-            text-align: center;
-            padding: 0.5rem;
-
-            &:hover{
-                background: $main-color;
-            }
-        }
+      &:hover {
+        background: $main-color;
+      }
     }
+  }
 }

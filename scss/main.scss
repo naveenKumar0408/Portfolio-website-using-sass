@@ -112,6 +112,25 @@ input[class^="btn-"]:hover {
   }
 }
 
+// Backgrounds
+.bg {
+  &-main {
+    background: $main-color;
+    color: set-text-color($main-color);
+  }
+  &-dark {
+    background: $dark-color;
+    color: set-text-color($dark-color);
+  }
+  &-light {
+    background: $light-color;
+    color: set-text-color($light-color);
+  }
+  &-medium {
+    background: $medium-color;
+    color: set-text-color($medium-color);
+  }
+}
 // Section Title
 .section-title {
   font-size: 2rem;
@@ -290,6 +309,44 @@ input[class^="btn-"]:hover {
           }
         }
       }
+    }
+  }
+}
+
+// About Sections
+#about {
+  &-a {
+    .about-info {
+      display: grid;
+      grid-template-areas:
+        "bioimage bio bio"
+        "award1 award2 award3";
+      grid-gap: 1.2rem;
+    }
+
+    //Grid Area
+    .bio-image {
+      grid-area: bioimage;
+    }
+    .bio {
+      grid-area: bio;
+      border-left: 3px solid $main-color;
+      padding: 0.8rem;
+    }
+    .award-1 {
+      grid-area: award1;
+    }
+    .award-2 {
+      grid-area: award2;
+    }
+    .award-3 {
+      grid-area: award3;
+    }
+    .award-1 .fas,
+    .award-2 .fas,
+    .award-3 .fas {
+      color: $main-color;
+      margin: 1rem;
     }
   }
 }
